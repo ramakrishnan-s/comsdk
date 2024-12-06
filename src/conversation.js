@@ -125,15 +125,22 @@ $(document).ready(function () {
               });
 
         $( "#slider" ).mouseleave(function() {
-          bu.mouseleave();
+         // bu.mouseleave();
           callControl.closeKeyPad();
          });
+		
 
          $('#keyPadClose').click(function () {
 
                     callControl.closeKeyPad();
                 });
 
+		$(document).keyup(function(e) {
+			if (e.key == "Escape") { 
+				slideIn();;
+			}
+			
+		});
 
 /*         $( "#slider" ).mouseout(function() {
             bu.mouseleave();
@@ -333,7 +340,7 @@ bu.initCom= function ()
   document.write ("</ul>");
 
 
-  document.write("<div id='slider' style='position:fixed; z-index:auto;top: 10%; right: -372px;'  >" );
+  document.write("<div id='slider' style='position:fixed; z-index:10000;top: 10%; right: -472px;'  >" );
 
    document.write("<div  id='header'  >");
     document.write("<div class='botui-app-container' id='"+bu.sessionName+"' >");
@@ -501,7 +508,7 @@ function openChatWindow()
   function slideIn ()
  {
  	var slidingDiv = document.getElementById("slider");
- 	var stopPosition = -372;
+ 	var stopPosition = -572;
 
  	if (parseInt(slidingDiv.style.right) > stopPosition )
  	{
@@ -530,11 +537,12 @@ if (parseInt(slidingDiv.style.right) > stopPosition )
     setTimeout(function () {
     //   $('.copy .wrapper').hide();
     slideIn();
-  }, 4000);
+  }, 2000);
 
 
  };
-
+ 
+ 
  bu.generateTrackerId = function () {
    var _id= Math.floor(Date.now() / 1000) ;
    return _id;

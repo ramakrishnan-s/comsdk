@@ -16,22 +16,24 @@ padding-bottom:15px;
 font-size:17px
 }
 #slider {
-width:500px;
+width:400px;
 top:100px;
-position:absolute
+position:absolute;
+background-color:#ffffff
 }
 
 #header {
-width:260px;
-height:360px;
+width:400px;
+height:320px;
 position:absolute;
 right:0;
 border:1px solid #d8d8d8;
-margin-left:40px;
-padding:20px 40px;
+/*margin-left:40px;
+padding:20px 40px;*/
 border-radius:3px;
 box-shadow:0 0 8px gray;
-overflow-y: scroll
+overflow-y: scroll;
+background-color:#ffffff
 }
 #sidebar {
 position:absolute;

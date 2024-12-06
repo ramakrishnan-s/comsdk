@@ -138,7 +138,7 @@ module.exports = {
 
     path: path.resolve(__dirname, '../dist'),
     publicPath: "dist",
-    filename: 'bundle.js'
+    filename: 'comsdk.js'
 
 
   },
